@@ -84,3 +84,16 @@ main {
 .kitten {
   margin-bottom: 1em;
 }
+
+.kitten ul {
+  display: block;
+  list-style-type: none;
+}
+
+.submit-button {
+  margin-right: 29em;
+  color: white;
+  background-color: blue;
+  box-shadow: 3px 3px 3px black;
+  border: 1px solid black;
+}
