@@ -1,8 +1,12 @@
+<h1>Categorize</h1>
 <div class="kittens-container">
   <%= image_tag @kitten.image %>
   <%= form_for [:kitten, @categorization] do |f| %>
+    <% @categorization.errors.full_messages.each do |message| %>
+     <h3 class="errors"> <%= message %></h3>
+    <% end %>
 
     <%= f.collection_select :category_id, Category.order(:name), :id, :name, {prompt: true}, class: "select-form" %>
     <%= f.submit "Add Category", class: "submit-button" %>
-</div>
+    </div>
   <% end %>
